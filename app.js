@@ -14,7 +14,7 @@ function errorHandler(error){
 function clickHandler(){
     // console.log(textInp.value);
   fetch(getTranslationUrl(textInp.value)).then(response=>response.json()).then(json=>{
-    //   output.innerText=json.contents.translated;
+      output.innerText=json.contents.translated;
     
   }).catch(errorHandler) 
 };
