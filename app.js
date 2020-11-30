@@ -2,9 +2,19 @@ var textInp = document.querySelector("textarea");
 const btn = document.querySelector("#btn");
 var output = document.querySelector("#output");
 
+// var serverUrl="https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json";
+var serverUrl = "https://api.funtranslations.com/translate/minion.json";
+function getTranslationUrl(text){
+    return serverUrl+"?"+"text="+text;
+}
+// var inputText = textInp.value;
+
 function clickHandler(){
-    output.innerText=textInp.value;
-    // console.log("This is trnslater abracadabra"+ textInp.value);
+    // console.log(textInp.value);
+  fetch(getTranslationUrl(textInp.value)).then(response=>response.json()).then(json=>{
+      output.innerText=json.contents.translated;
+    
+  });  
 };
 btn.addEventListener("click", clickHandler);
 
