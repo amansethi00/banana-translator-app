@@ -26,6 +26,7 @@ textarea {
   display: block;
   border: 1px solid black;
   margin-bottom: 5rem;
+  margin-top: 1rem;
 }
 
 .nav-bar {
@@ -39,6 +40,7 @@ textarea {
 .container {
   max-width: 80%;
   margin: auto;
+  margin-bottom: 15rem;
 }
 .container #btn {
   background-color: var(--turtle-gray);
@@ -49,7 +51,13 @@ textarea {
   font-size: large;
   font-weight: bold;
 }
+#para {
+  margin: auto;
+  text-align: center;
+}
 .footer {
+  /* position: fixed; */
+  display: block;
   background-color: var(--turtle-gray);
   padding: 2rem 0rem;
   text-align: center;
